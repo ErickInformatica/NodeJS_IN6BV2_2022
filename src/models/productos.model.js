@@ -3,13 +3,11 @@ var Schema = mongoose.Schema;
 
 var ProductosSchema = Schema({
     nombre: String,
-    proveedor: String,
-    sabores: [],
-    tamanios: [{
-        peso: String,
-        ancho: String,
-        altura: String
-    }]
+    proveedor: [{
+        nombreProveedor: String,
+        direccion: String
+    }],
+    sabores: []
 })
 
 module.exports = mongoose.model('Productos', ProductosSchema)
